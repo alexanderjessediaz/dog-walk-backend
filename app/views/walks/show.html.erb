@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @walk.date %>
+</p>
+
+<p>
+  <strong>Time of walk:</strong>
+  <%= @walk.time_of_walk %>
+</p>
+
+<p>
+  <strong>Walk time length:</strong>
+  <%= @walk.walk_time_length %>
+</p>
+
+<p>
+  <strong>Pee:</strong>
+  <%= @walk.pee %>
+</p>
+
+<p>
+  <strong>Pee count:</strong>
+  <%= @walk.pee_count %>
+</p>
+
+<p>
+  <strong>Poop:</strong>
+  <%= @walk.poop %>
+</p>
+
+<p>
+  <strong>Poop count:</strong>
+  <%= @walk.poop_count %>
+</p>
+
+<%= link_to 'Edit', edit_walk_path(@walk) %> |
+<%= link_to 'Back', walks_path %>

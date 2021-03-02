@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Walks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Time of walk</th>
+      <th>Walk time length</th>
+      <th>Pee</th>
+      <th>Pee count</th>
+      <th>Poop</th>
+      <th>Poop count</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @walks.each do |walk| %>
+      <tr>
+        <td><%= walk.date %></td>
+        <td><%= walk.time_of_walk %></td>
+        <td><%= walk.walk_time_length %></td>
+        <td><%= walk.pee %></td>
+        <td><%= walk.pee_count %></td>
+        <td><%= walk.poop %></td>
+        <td><%= walk.poop_count %></td>
+        <td><%= link_to 'Show', walk %></td>
+        <td><%= link_to 'Edit', edit_walk_path(walk) %></td>
+        <td><%= link_to 'Destroy', walk, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Walk', new_walk_path %>
